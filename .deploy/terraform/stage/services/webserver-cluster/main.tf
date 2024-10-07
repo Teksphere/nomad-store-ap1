@@ -28,7 +28,7 @@ terraform {
 }
 
 module "webserver_cluster" {
-  source = "../../../modules/services/websever-cluster"
+  source = "../../../modules/services/webserver-cluster"
 
   cluster_name = "webservers-stage"
   stripe_secret_key = var.stripe_secret_key
