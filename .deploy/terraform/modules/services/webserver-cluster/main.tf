@@ -123,7 +123,7 @@ data "aws_iam_role" "logs_role" {
 # "nomad_logs_profile"
 resource "aws_iam_instance_profile" "nomad_log_profile" {
   name = var.log_profile_name
-  role = aws_iam_role.role.name
+  role = data.aws_iam_role.role.name
 }
 
 // launch config resource for asg
