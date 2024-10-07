@@ -250,7 +250,7 @@ resource "aws_autoscaling_group" "nomad_asg" {
 
 resource "aws_lb_listener" "https" {
   load_balancer_arn = aws_lb.nomad_lb.arn
-  certification_arn = aws_acm_certificate_validation.cert.certificate_arn
+  certificate_arn = aws_acm_certificate_validation.cert.certificate_arn
   port = "443"
   protocol = "HTTPS"
 
