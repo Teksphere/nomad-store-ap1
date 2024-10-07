@@ -159,7 +159,7 @@ resource "aws_iam_role" "role" {
         {
             "Effect": "Allow",
             "Action": [
-                "sts:Assumerole"
+                "sts:AssumeRole"
             ],
             "Principal": {
                 "Service": [
