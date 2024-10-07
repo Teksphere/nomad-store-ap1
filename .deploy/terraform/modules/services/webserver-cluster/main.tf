@@ -186,7 +186,7 @@ resource "aws_iam_instance_profile" "nomad_log_profile" {
 resource "aws_launch_configuration" "nomad_lc" {
   name_prefix = "nomad"
   image_id = data.aws_ami.nomad_ami.image_id
-  intance_type = var.instance_type
+  instance_type = var.instance_type
   security_groups = [aws_security_group.instance.id]
   user_data = data.template_file.user_data.rendered
   associate_public_ip_address = true

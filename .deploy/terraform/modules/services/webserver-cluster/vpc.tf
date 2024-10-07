@@ -40,7 +40,7 @@ resource "aws_subnet" "subnet_2_public" {
 resource "aws_subnet" "subnet_3_public" {
   vpc_id = aws_vpc.vpc.id
   cidr_block = var.cidr_public_subnet_3
-  availabilty_zone = data.aws_availability_zones.available.names[2]
+  availability_zone = data.aws_availability_zones.available.names[2]
 
   tags = {
     Tier = "Public"
