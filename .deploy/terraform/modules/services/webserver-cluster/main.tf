@@ -94,7 +94,7 @@ resource "aws_security_group" "instance" {
     from_port = var.server_port
     to_port = var.server_port
     protocol = "tcp"
-    cidr_blocks = lcoal.all_ips
+    cidr_blocks = local.all_ips
   }
 
   egress {
@@ -179,7 +179,7 @@ resource "aws_iam_role_policy_attachment" "attach-policy" {
 # "nomad_logs_profile"
 resource "aws_iam_instance_profile" "nomad_log_profile" {
   name = var.log_profile_name
-  role = data.aws_iam_role.role.name
+  role = aws_iam_role.role.name
 }
 
 // launch config resource for asg

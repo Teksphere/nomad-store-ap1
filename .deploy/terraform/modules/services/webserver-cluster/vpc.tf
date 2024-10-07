@@ -10,7 +10,7 @@ resource "aws_internet_gateway" "igw" {
 }
 
 // AZ data source
-data "aws_availabilty_zones" "available" {
+data "aws_availability_zones" "available" {
   state = "available"
 }
 
@@ -18,7 +18,7 @@ data "aws_availabilty_zones" "available" {
 resource "aws_subnet" "subnet_1_public" {
   vpc_id = aws_vpc.vpc.id
   cidr_block = var.cidr_public_subnet_1
-  availabilty_zone = data.aws_availability_zones.available.names[0]
+  availability_zone = data.aws_availability_zones.available.names[0]
 
   tags = {
     Tier = "Public"
@@ -29,7 +29,7 @@ resource "aws_subnet" "subnet_1_public" {
 resource "aws_subnet" "subnet_2_public" {
   vpc_id = aws_vpc.vpc.id
   cidr_block = var.cidr_public_subnet_2
-  availabilty_zone = data.aws_availability_zones.available.names[1]
+  availability_zone = data.aws_availability_zones.available.names[1]
 
   tags = {
     Tier = "Public"
