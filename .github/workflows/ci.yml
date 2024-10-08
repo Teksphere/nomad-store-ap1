@@ -71,6 +71,5 @@ jobs:
       - name: run terraform init in services dir 
         run: cd .deploy/terraform/stage/services/webserver-cluster && terraform init 
       - name: deploy webserver cluster on aws 
-        run: cd .deploy/terraform/stage/services/webserver-cluster && terraform force-unlock 4a756085-e0a5-9fd8-279a-6122c48164a2 -y && terraform apply -auto-approve
-
+        run: cd .deploy/terraform/stage/services/webserver-cluster && terraform apply -auto-approve
 
