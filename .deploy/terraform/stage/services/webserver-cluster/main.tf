@@ -13,7 +13,7 @@ provider "aws" {
 }
 
 
-# terraform backend remote for state data ok
+# terraform backend remote for state data
 terraform {
   backend "s3" {
     # set bucket details
