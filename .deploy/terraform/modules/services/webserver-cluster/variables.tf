@@ -72,3 +72,12 @@ variable "dns_name" {
   description = "subdomain name"
 }
 
+variable "policy_name" {
+  description = "stage cloudwatch policy name"
+  type = string
+}
+
+variable "role_name" {
+  description = "stage cloudwatch role name"
+  type = string
+}
