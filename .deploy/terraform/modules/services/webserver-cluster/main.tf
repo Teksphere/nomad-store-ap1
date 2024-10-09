@@ -111,7 +111,7 @@ data "aws_ami" "nomad_ami" {
 }
 
 resource "aws_iam_policy" "policy" {
-  name = "nomad-policy"
+  name = var.policy_name
   description = "EC2 Policy for sending logs to cloudwatch"
 
   policy = jsonencode({
@@ -145,7 +145,7 @@ resource "aws_iam_policy" "policy" {
 }
 
 resource "aws_iam_role" "role" {
-  name = "nomad-role"
+  name = var.role_name
 
   assume_role_policy = jsonencode({
     "Version": "2012-10-17",

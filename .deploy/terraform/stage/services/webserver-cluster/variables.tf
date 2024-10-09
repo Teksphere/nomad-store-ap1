@@ -12,3 +12,15 @@ variable "web_hook_secret" {
   description = " The Stripe webhook secret"
   type = string
 }
+
+variable "policy_name" {
+  description = "stage cloudwatch policy name"
+  type = string
+  default = "nomad-policy"
+}
+
+variable "role_name" {
+  description = "stage cloudwatch role name"
+  type = string
+  default = "nomad-role"
+}

@@ -35,6 +35,9 @@ module "webserver_cluster" {
   web_app_url = var.web_app_url
   web_hook_secret = var.web_hook_secret
 
+  policy_name = var.policy_name
+  role_name = var.role_name
+
   dns_name= "dev-api"
   log_profile_name= "nomad_stage_logs_profile"
 
